@@ -1,149 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GlowGlam Beauty - Checkout</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Checkout - GlowGlam Beauty</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="logo">GlowGlam<span>Beauty</span></a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        ☰
-      </button>
+<header>
+  <div class="container nav">
+    <h1 class="logo">GlowGlam <span>Beauty</span></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-      <nav class="nav" id="navMenu">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="products.html" class="nav-link">Shop</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="checkout.html" class="nav-link nav-cart active">
-          Cart (<span data-cart-count>0</span>)
-        </a>
-      </nav>
-    </div>
-  </header>
+<section class="container">
+  <h2>Checkout</h2>
 
-  <main class="section">
-    <div class="container payment-layout">
-      <!-- CART SUMMARY -->
-      <section class="card">
-        <h1>Your Cart</h1>
-        <div id="cartEmpty" class="cart-empty hidden">
-          Your cart is empty. <a href="products.html">Start shopping</a>.
-        </div>
+  <form id="purchaseForm">
+    <label>Full Name</label>
+    <input type="text" required>
 
-        <div id="cartContent">
-          <table class="cart-table">
-            <thead>
-              <tr>
-                <th>Product</th>
-                <th>Shade</th>
-                <th>Price</th>
-                <th>Qty</th>
-                <th>Subtotal</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody id="cartTableBody">
-              <!-- Filled by app.js -->
-            </tbody>
-          </table>
+    <label>Email</label>
+    <input type="email" required>
 
-          <div class="order-summary">
-            <div class="order-row">
-              <span>Subtotal</span>
-              <span id="subtotalAmount">₹0</span>
-            </div>
-            <div class="order-row">
-              <span>Shipping</span>
-              <span id="shippingAmount">₹0</span>
-            </div>
-            <div class="order-row order-total">
-              <span>Total</span>
-              <span id="totalAmount">₹0</span>
-            </div>
-          </div>
+    <label>Address</label>
+    <input type="text" required>
 
-          <a href="products.html" class="btn outline full-width">
-            Continue Shopping
-          </a>
-        </div>
-      </section>
+    <label>Card Number</label>
+    <input type="text" required placeholder="xxxx xxxx xxxx xxxx">
 
-      <!-- PAYMENT FORM -->
-      <section class="card">
-        <h2>Shipping & Payment</h2>
-        <form class="form" id="checkoutForm">
-          <div class="form-group">
-            <label for="fullName">Full Name</label>
-            <input id="fullName" name="fullName" type="text" required />
-          </div>
+    <button class="btn" type="submit">Complete Purchase</button>
+  </form>
+</section>
 
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input id="email" name="email" type="email" required />
-          </div>
+<footer>
+  <p>© <span id="year"></span> GlowGlam Beauty</p>
+</footer>
 
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input id="phone" name="phone" type="tel" required />
-          </div>
-
-          <div class="form-group">
-            <label for="address">Full Address</label>
-            <input id="address" name="address" type="text" required />
-          </div>
-
-          <div class="form-inline">
-            <div class="form-group">
-              <label for="city">City</label>
-              <input id="city" name="city" type="text" required />
-            </div>
-            <div class="form-group">
-              <label for="pincode">Pincode</label>
-              <input id="pincode" name="pincode" type="text" required />
-            </div>
-          </div>
-
-          <h3>Card Details</h3>
-          <div class="form-group">
-            <label for="cardNumber">Card Number</label>
-            <input id="cardNumber" type="text" maxlength="19"
-                   placeholder="xxxx xxxx xxxx xxxx" required />
-          </div>
-
-          <div class="form-inline">
-            <div class="form-group">
-              <label for="expiry">Expiry</label>
-              <input id="expiry" type="text" placeholder="MM/YY" required />
-            </div>
-            <div class="form-group">
-              <label for="cvv">CVV</label>
-              <input id="cvv" type="password" maxlength="4" required />
-            </div>
-          </div>
-
-          <button type="submit" class="btn primary full-width">
-            Pay Securely
-          </button>
-        </form>
-
-        <p class="secure-text">
-          🔒 Your payment is simulated for demo purposes. No real transaction is made.
-        </p>
-      </section>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <p>&copy; <span id="year"></span> GlowGlam Beauty. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
