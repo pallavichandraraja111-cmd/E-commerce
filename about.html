@@ -28,6 +28,7 @@
 
   <main class="section">
     <div class="container about-layout">
+      <!-- LEFT: ABOUT TEXT -->
       <section>
         <h1>About GlowGlam Beauty</h1>
         <p>
@@ -51,8 +52,44 @@
           <a href="products.html" class="btn primary">Shop Makeup</a>
           <a href="checkout.html" class="btn outline">Go to Checkout</a>
         </div>
+
+        <!-- ✨ NEW: ENQUIRY / COMMENTS FORM -->
+        <section class="section" style="padding-left:0; padding-right:0;">
+          <h2>Enquiry / Comments</h2>
+          <p style="margin-bottom:0.75rem; color:#4b5563;">
+            Have a question about shades, orders, or collaborations? Send us a message:
+          </p>
+
+          <form class="form" id="enquiryForm">
+            <div class="form-group">
+              <label for="enquiryName">Your Name</label>
+              <input id="enquiryName" name="name" type="text" required />
+            </div>
+
+            <div class="form-group">
+              <label for="enquiryEmail">Email Address</label>
+              <input id="enquiryEmail" name="email" type="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="enquirySubject">Subject</label>
+              <input id="enquirySubject" name="subject" type="text" required />
+            </div>
+
+            <div class="form-group">
+              <label for="enquiryMessage">Message / Comments</label>
+              <textarea id="enquiryMessage" name="message" rows="4" required
+                style="padding:0.5rem 0.6rem; border-radius:0.8rem; border:1px solid #fecaca; font-family:inherit; font-size:0.95rem;"></textarea>
+            </div>
+
+            <button type="submit" class="btn primary full-width">
+              Send Message
+            </button>
+          </form>
+        </section>
       </section>
 
+      <!-- RIGHT: CONTACT INFO -->
       <aside class="about-aside">
         <h2>Contact Us</h2>
         <p>Email: support@glowglambeauty.com</p>
