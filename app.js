@@ -1,22 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-  
+
   const form = document.getElementById("enquiryForm");
   if (!form) return;
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Simple validation
-    if (
-      document.getElementById("name").value.trim() === "" ||
-      document.getElementById("email").value.trim() === "" ||
-      document.getElementById("message").value.trim() === ""
-    ) {
-      alert("Please fill in all fields.");
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (name === "" || email === "" || message === "") {
+      alert("Please fill all fields.");
       return;
     }
 
-    // Redirect to thank you page
+    // NO POPUP — DIRECT REDIRECT 👍
     window.location.href = "thankyou.html";
   });
 
