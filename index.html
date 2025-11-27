@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simple Makeup Store</title>
+  <title>GlowGlam Beauty - Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>Simple Makeup Store</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="about.html">About</a>
-  </nav>
+  <div class="container nav">
+    <h1 class="logo">GlowGlam <span>Beauty</span></h1>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<section>
-  <h2>Welcome!</h2>
-  <p>Your one-stop shop for simple, affordable makeup products.</p>
-  <a class="btn" href="products.html">Browse Products</a>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h2>Everyday Makeup Made Simple</h2>
+      <p>Affordable, easy-to-use products made for daily beauty lovers.</p>
+      <a class="btn" href="products.html">Shop Now</a>
+    </div>
+
+    <div class="hero-box">
+      <h3>New Collection</h3>
+      <p>Matte Lipsticks starting at ₹199</p>
+      <a href="products.html" class="btn small">Explore</a>
+    </div>
+  </div>
 </section>
 
+<footer>
+  <p>© <span id="year"></span> GlowGlam Beauty</p>
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>
