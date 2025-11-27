@@ -1,55 +1,114 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #fafafa;
 }
 
 header {
-  background: #ff6ea1;
+  background: #ff4f87;
   color: white;
-  padding: 15px;
-  text-align: center;
+  padding: 15px 0;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav a {
   margin: 0 10px;
   color: white;
   text-decoration: none;
-  font-weight: bold;
 }
 
 nav a.active {
   text-decoration: underline;
 }
 
-section {
-  padding: 20px;
+.logo span {
+  color: #ffeaea;
 }
 
-.product {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin: 10px 0;
+.hero {
+  padding: 40px 0;
+  background: #ffe6ef;
+}
+
+.hero-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-box {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .btn {
-  display: inline-block;
-  padding: 10px 15px;
-  background: #ff6ea1;
+  background: #ff4f87;
   color: white;
-  text-decoration: none;
+  padding: 10px 15px;
   border-radius: 5px;
-  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
 }
 
-form input, form textarea {
+.btn.small {
+  padding: 6px 10px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.product-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.img-placeholder {
+  background: #ddd;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+table {
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  margin-bottom: 15px;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
 }
 
 .center {
   text-align: center;
-  margin-top: 100px;
+  padding: 50px;
 }
