@@ -7,7 +7,8 @@ const PRODUCT_DATA = [
     shade: "Rose Pink",
     category: "lips",
     price: 699,
-    description: "Highly pigmented velvet matte lipstick with a soft, comfy finish.",
+    description:
+      "Highly pigmented velvet matte lipstick with a soft, comfy finish.",
   },
   {
     id: "lip-nude",
@@ -33,7 +34,8 @@ const PRODUCT_DATA = [
     shade: "Medium Neutral",
     category: "face",
     price: 1299,
-    description: "Medium-to-full coverage foundation with a natural radiant finish.",
+    description:
+      "Medium-to-full coverage foundation with a natural radiant finish.",
   },
   {
     id: "concealer",
@@ -41,7 +43,8 @@ const PRODUCT_DATA = [
     shade: "Medium Warm",
     category: "face",
     price: 799,
-    description: "Creamy concealer to brighten under-eyes and conceal blemishes.",
+    description:
+      "Creamy concealer to brighten under-eyes and conceal blemishes.",
   },
   {
     id: "blush-cream",
@@ -67,7 +70,8 @@ const PRODUCT_DATA = [
     shade: "Black",
     category: "eyes",
     price: 599,
-    description: "Smudge-proof, matte black liner with a precise brush tip.",
+    description:
+      "Smudge-proof, matte black liner with a precise brush tip for winged looks.",
   },
   {
     id: "mascara",
@@ -116,7 +120,7 @@ function addToCart(id) {
   alert("Added to cart: " + product.name);
 }
 
-// Remove product
+// Remove product from cart
 function removeFromCart(id) {
   const cart = getCart().filter((item) => item.id !== id);
   saveCart(cart);
@@ -124,7 +128,7 @@ function removeFromCart(id) {
   updateCartCount();
 }
 
-// Update qty
+// Update cart quantity
 function updateCartQty(id, qty) {
   let cart = getCart();
   const item = cart.find((i) => i.id === id);
@@ -140,7 +144,7 @@ function updateCartQty(id, qty) {
   updateCartCount();
 }
 
-// Cart count in header
+// Update cart count in header
 function updateCartCount() {
   const cart = getCart();
   const count = cart.reduce((sum, item) => sum + item.qty, 0);
@@ -158,8 +162,8 @@ function renderProductsPage() {
   const categoryFilter = document.getElementById("categoryFilter");
 
   function applyFilters() {
-    const searchTerm = (searchInput.value || "").toLowerCase();
-    const category = categoryFilter.value;
+    const searchTerm = (searchInput?.value || "").toLowerCase();
+    const category = categoryFilter?.value || "all";
 
     grid.innerHTML = "";
 
@@ -191,7 +195,7 @@ function renderProductsPage() {
       grid.appendChild(card);
     });
 
-    // Attach listeners
+    // Attach click handlers
     grid.querySelectorAll("[data-add-to-cart]").forEach((btn) => {
       btn.addEventListener("click", () => addToCart(btn.dataset.addToCart));
     });
@@ -304,12 +308,40 @@ function initCheckoutForm() {
       return;
     }
 
-    // Simple demo validation already handled by 'required'
-    alert("Thank you for your order! (Demo only)");
-    // Clear cart
+    alert("Thank you for your order! (Demo only, no real payment processed.)");
+    // Clear cart after "payment"
     saveCart([]);
     renderCart();
     updateCartCount();
+  });
+}
+
+// --- ENQUIRY / COMMENTS FORM ---
+function initEnquiryForm() {
+  const form = document.getElementById("enquiryForm");
+  if (!form) return; // not on about page
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("enquiryName").value.trim();
+    const email = document.getElementById("enquiryEmail").value.trim();
+    const subject = document.getElementById("enquirySubject").value.trim();
+    const message = document.getElementById("enquiryMessage").value.trim();
+
+    if (!name || !email || !subject || !message) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    // Demo: show success message. Later you can send this to a backend or email service.
+    alert(
+      "Thank you for your message, " +
+        name +
+        "! We have received your enquiry."
+    );
+
+    form.reset();
   });
 }
 
@@ -320,4 +352,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProductsPage();
   renderCart();
   initCheckoutForm();
+  initEnquiryForm();
 });
