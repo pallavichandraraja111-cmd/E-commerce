@@ -1,117 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GlowGlam Beauty - About</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>About Us</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="logo">GlowGlam<span>Beauty</span></a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        ☰
-      </button>
+<header>
+  <h1>Simple Makeup Store</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a class="active" href="about.html">About</a>
+  </nav>
+</header>
 
-      <nav class="nav" id="navMenu">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="products.html" class="nav-link">Shop</a>
-        <a href="about.html" class="nav-link active">About</a>
-        <a href="checkout.html" class="nav-link nav-cart">
-          Cart (<span data-cart-count>0</span>)
-        </a>
-      </nav>
-    </div>
-  </header>
+<section>
+  <h2>About Us</h2>
+  <p>We sell simple, affordable, daily-use makeup products.</p>
 
-  <main class="section">
-    <div class="container about-layout">
-      <!-- LEFT: ABOUT TEXT -->
-      <section>
-        <h1>About GlowGlam Beauty</h1>
-        <p>
-          GlowGlam Beauty is a makeup-first brand focused on high-performance,
-          cruelty-free products that work for every skin tone and undertone.
-        </p>
-        <p>
-          From everyday soft glam to full-glam looks, our formulations are
-          tested to be long-lasting, lightweight and camera-ready.
-        </p>
+  <h2>Enquiry Form</h2>
 
-        <h2>Our Values</h2>
-        <ul class="list">
-          <li>✔ Cruelty-free & ethically sourced</li>
-          <li>✔ Shades for all skin tones</li>
-          <li>✔ High pigment, low effort</li>
-          <li>✔ Clean, skin-loving ingredients</li>
-        </ul>
+  <form id="enquiryForm">
+    <label>Your Name</label>
+    <input type="text" id="name" required>
 
-        <div class="about-actions">
-          <a href="products.html" class="btn primary">Shop Makeup</a>
-          <a href="checkout.html" class="btn outline">Go to Checkout</a>
-        </div>
+    <label>Your Email</label>
+    <input type="email" id="email" required>
 
-        <!-- ✨ NEW: ENQUIRY / COMMENTS FORM -->
-        <section class="section" style="padding-left:0; padding-right:0;">
-          <h2>Enquiry / Comments</h2>
-          <p style="margin-bottom:0.75rem; color:#4b5563;">
-            Have a question about shades, orders, or collaborations? Send us a message:
-          </p>
+    <label>Message</label>
+    <textarea id="message" required></textarea>
 
-          <form class="form" id="enquiryForm">
-            <div class="form-group">
-              <label for="enquiryName">Your Name</label>
-              <input id="enquiryName" name="name" type="text" required />
-            </div>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
 
-            <div class="form-group">
-              <label for="enquiryEmail">Email Address</label>
-              <input id="enquiryEmail" name="email" type="email" required />
-            </div>
+</section>
 
-            <div class="form-group">
-              <label for="enquirySubject">Subject</label>
-              <input id="enquirySubject" name="subject" type="text" required />
-            </div>
-
-            <div class="form-group">
-              <label for="enquiryMessage">Message / Comments</label>
-              <textarea id="enquiryMessage" name="message" rows="4" required
-                style="padding:0.5rem 0.6rem; border-radius:0.8rem; border:1px solid #fecaca; font-family:inherit; font-size:0.95rem;"></textarea>
-            </div>
-
-            <button type="submit" class="btn primary full-width">
-              Send Message
-            </button>
-          </form>
-        </section>
-      </section>
-
-      <!-- RIGHT: CONTACT INFO -->
-      <aside class="about-aside">
-        <h2>Contact Us</h2>
-        <p>Email: support@glowglambeauty.com</p>
-        <p>Phone: +91-98765-43210</p>
-        <p>Address: GlowGlam Studio, Mumbai, India</p>
-
-        <h3>Quick Links</h3>
-        <ul class="list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Shop All Products</a></li>
-          <li><a href="checkout.html">Checkout</a></li>
-        </ul>
-      </aside>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <p>&copy; <span id="year"></span> GlowGlam Beauty. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
