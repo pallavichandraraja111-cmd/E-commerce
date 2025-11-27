@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlowGlam Beauty - Shop Makeup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">GlowGlam<span>Beauty</span></a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <nav class="nav" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link active">Shop</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="checkout.html" class="nav-link nav-cart">
+          Cart (<span data-cart-count>0</span>)
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <header class="products-header">
+        <div>
+          <h1>Makeup Collection</h1>
+          <p>Choose from our curated list of cruelty-free makeup essentials.</p>
+        </div>
+        <div class="products-filters">
+          <label>
+            Search:
+            <input type="text" id="searchInput" placeholder="lipstick, foundation..." />
+          </label>
+          <label>
+            Category:
+            <select id="categoryFilter">
+              <option value="all">All</option>
+              <option value="lips">Lips</option>
+              <option value="face">Face</option>
+              <option value="eyes">Eyes</option>
+            </select>
+          </label>
+        </div>
+      </header>
+
+      <div id="productsGrid" class="grid-3">
+        <!-- Products will be rendered by app.js using PRODUCT_DATA -->
+      </div>
+
+      <div class="shop-footer">
+        <a href="checkout.html" class="btn primary">View Cart & Checkout</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="year"></span> GlowGlam Beauty. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
