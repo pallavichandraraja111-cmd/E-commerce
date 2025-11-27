@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlowGlam Beauty - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">GlowGlam<span>Beauty</span></a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <nav class="nav" id="navMenu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="products.html" class="nav-link">Shop</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="checkout.html" class="nav-link nav-cart">
+          Cart (<span data-cart-count>0</span>)
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero hero-makeup">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Glow Up Your Makeup Game</h1>
+        <p>
+          Discover premium lipsticks, foundations, eyeshadow palettes and more.
+          100% cruelty-free, long-lasting, and made for every skin tone.
+        </p>
+        <div class="hero-actions">
+          <a href="products.html" class="btn primary">Shop Makeup</a>
+          <a href="about.html" class="btn outline-light">About GlowGlam</a>
+        </div>
+        <p class="hero-tagline">Free shipping on orders over ₹999.</p>
+      </div>
+      <div class="hero-image">
+        <div class="hero-card">
+          <h2>New: Summer Glow Collection</h2>
+          <p>Soft glam palettes, hydrating lip oils & luminous bases.</p>
+          <a href="products.html#new" class="btn small primary">Explore Collection</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Shop by Category</h2>
+      <div class="grid-3">
+        <a href="products.html#lips" class="category-card">
+          <div class="category-image placeholder-category">Lips</div>
+          <h3>Lipsticks & Gloss</h3>
+          <p>Matte, satin, gloss & lip oils in every shade.</p>
+        </a>
+
+        <a href="products.html#face" class="category-card">
+          <div class="category-image placeholder-category">Face</div>
+          <h3>Face & Base</h3>
+          <p>Foundations, concealers & blush for every undertone.</p>
+        </a>
+
+        <a href="products.html#eyes" class="category-card">
+          <div class="category-image placeholder-category">Eyes</div>
+          <h3>Eyes</h3>
+          <p>Palettes, liners & mascaras for bold or soft glam.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS (link to shop) -->
+  <section class="section section-accent">
+    <div class="container">
+      <h2 class="section-title">Bestsellers</h2>
+      <div class="grid-3">
+        <article class="product-card">
+          <div class="product-image-placeholder">Lipstick</div>
+          <h3>Velvet Matte Lipstick - Rose Crush</h3>
+          <p class="price">₹699</p>
+          <a href="products.html#lip-rose" class="btn small primary">View Product</a>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image-placeholder">Foundation</div>
+          <h3>Flawless Filter Foundation</h3>
+          <p class="price">₹1,299</p>
+          <a href="products.html#foundation-ff" class="btn small primary">View Product</a>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image-placeholder">Palette</div>
+          <h3>Soft Glam Eyeshadow Palette</h3>
+          <p class="price">₹1,599</p>
+          <a href="products.html#palette-soft" class="btn small primary">View Product</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container cta">
+      <div>
+        <h2>Ready to Checkout?</h2>
+        <p>Review your cart and complete your secure payment in a few clicks.</p>
+      </div>
+      <a href="checkout.html" class="btn primary">Go to Checkout</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="year"></span> GlowGlam Beauty. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
