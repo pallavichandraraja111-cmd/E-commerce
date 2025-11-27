@@ -291,7 +291,7 @@ function initLayoutHelpers() {
 
   const yearEl = document.getElementById("year");
   if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
+    yearEl.textContent = new Date().getFullYear()
   }
 }
 
@@ -316,10 +316,10 @@ function initCheckoutForm() {
   });
 }
 
-// --- ENQUIRY / COMMENTS FORM ---
+// --- ENQUIRY / COMMENTS FORM (redirect to thankyou.html) ---
 function initEnquiryForm() {
   const form = document.getElementById("enquiryForm");
-  if (!form) return; // not on about page
+  if (!form) return; // Not on about page
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -334,14 +334,13 @@ function initEnquiryForm() {
       return;
     }
 
-    // Demo: show success message. Later you can send this to a backend or email service.
-    alert(
-      "Thank you for your message, " +
-        name +
-        "! We have received your enquiry."
-    );
+    // (Here you could send data to a backend with fetch() if you want.)
 
+    // Clear form (optional)
     form.reset();
+
+    // Redirect to Thank You page
+    window.location.href = "thankyou.html";
   });
 }
 
