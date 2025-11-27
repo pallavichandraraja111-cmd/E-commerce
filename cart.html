@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Cart - GlowGlam Beauty</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <h1 class="logo">GlowGlam <span>Beauty</span></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html" class="active">Cart</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="container">
+  <h2>Your Cart</h2>
+
+  <div id="emptyCart">Your cart is empty.</div>
+
+  <table id="cartTable" class="hidden">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price (₹)</th>
+        <th>Qty</th>
+        <th>Total</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="cartBody"></tbody>
+  </table>
+
+  <div id="cartTotalBox" class="hidden">
+    <h3>Total: ₹<span id="cartTotal">0</span></h3>
+    <a href="checkout.html" class="btn">Proceed to Checkout</a>
+  </div>
+</section>
+
+<footer>
+  <p>© <span id="year"></span> GlowGlam Beauty</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
