@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Our Products</title>
+  <title>Products - GlowGlam Beauty</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>Simple Makeup Store</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="about.html">About</a>
-  </nav>
+  <div class="container nav">
+    <h1 class="logo">GlowGlam <span>Beauty</span></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<section>
-  <h2>Products</h2>
+<section class="container">
+  <h2>Our Products</h2>
 
-  <div class="product">
-    <h3>Lipstick – ₹199</h3>
-    <p>Smooth matte finish.</p>
+  <div class="grid-3">
+    <div class="product-card">
+      <div class="img-placeholder">Lipstick</div>
+      <h3>Matte Lipstick</h3>
+      <p>₹199</p>
+      <button class="btn small add-to-cart" data-name="Matte Lipstick" data-price="199">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <div class="img-placeholder">Foundation</div>
+      <h3>Liquid Foundation</h3>
+      <p>₹299</p>
+      <button class="btn small add-to-cart" data-name="Liquid Foundation" data-price="299">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <div class="img-placeholder">Eyeliner</div>
+      <h3>Black Eyeliner</h3>
+      <p>₹149</p>
+      <button class="btn small add-to-cart" data-name="Black Eyeliner" data-price="149">Add to Cart</button>
+    </div>
   </div>
-
-  <div class="product">
-    <h3>Foundation – ₹299</h3>
-    <p>Lightweight natural coverage.</p>
-  </div>
-
-  <div class="product">
-    <h3>Eyeliner – ₹149</h3>
-    <p>Smudge-proof black eyeliner.</p>
-  </div>
-
 </section>
 
+<footer>
+  <p>© <span id="year"></span> GlowGlam Beauty</p>
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>
